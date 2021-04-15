@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="61" id="KGk-i7-Jjw" customClass="MyFriendsTableViewCell" customModule="VK_Client" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMc-oh-xGT">
+                        <rect key="frame" x="10" y="10" width="42" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="QtY-Ye-D3y">
+                        <rect key="frame" x="273" y="0.0" width="60" height="60"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="umf-ea-eW9" customClass="AvatarViwe">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="F17-Gg-MOP"/>
+                                    <constraint firstAttribute="height" constant="60" id="W85-P6-oN5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKP-zy-3bt">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GA6-GK-7Vt"/>
+                                    <constraint firstAttribute="width" constant="60" id="epP-Hn-6e1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="avatarButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jzr-fl-nmb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="umf-ea-eW9" secondAttribute="bottom" id="67p-MA-bq4"/>
+                            <constraint firstItem="umf-ea-eW9" firstAttribute="top" secondItem="QtY-Ye-D3y" secondAttribute="top" id="DkF-lW-fHk"/>
+                            <constraint firstAttribute="trailing" secondItem="pKP-zy-3bt" secondAttribute="trailing" id="Fgx-Xi-7V6"/>
+                            <constraint firstAttribute="trailing" secondItem="umf-ea-eW9" secondAttribute="trailing" id="OF7-Ty-Xd7"/>
+                            <constraint firstItem="umf-ea-eW9" firstAttribute="leading" secondItem="QtY-Ye-D3y" secondAttribute="leading" id="Xou-ex-wRa"/>
+                            <constraint firstItem="pKP-zy-3bt" firstAttribute="leading" secondItem="QtY-Ye-D3y" secondAttribute="leading" id="kfx-k9-zE7"/>
+                            <constraint firstAttribute="width" constant="60" id="mEW-hM-ovD"/>
+                            <constraint firstItem="pKP-zy-3bt" firstAttribute="top" secondItem="QtY-Ye-D3y" secondAttribute="top" id="r4E-Lp-94A"/>
+                            <constraint firstAttribute="bottom" secondItem="pKP-zy-3bt" secondAttribute="bottom" id="sq7-9W-pyE"/>
+                            <constraint firstAttribute="height" constant="60" id="vkq-pq-uzT"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="10" height="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XMc-oh-xGT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="RYd-g9-jzh"/>
+                    <constraint firstAttribute="trailing" secondItem="QtY-Ye-D3y" secondAttribute="trailing" id="Tb4-xd-Pss"/>
+                    <constraint firstItem="QtY-Ye-D3y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Uw8-EN-Y4T"/>
+                    <constraint firstItem="QtY-Ye-D3y" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YQt-wb-bnY"/>
+                    <constraint firstItem="XMc-oh-xGT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YZd-dw-0Su"/>
+                    <constraint firstAttribute="bottom" secondItem="XMc-oh-xGT" secondAttribute="bottom" constant="10" id="b0Q-lu-r3t"/>
+                    <constraint firstItem="XMc-oh-xGT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="f7i-qv-oGh"/>
+                    <constraint firstAttribute="bottom" secondItem="QtY-Ye-D3y" secondAttribute="bottom" id="g66-4V-7OK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarURL" destination="umf-ea-eW9" id="Sld-qq-odi"/>
+                <outlet property="friendName" destination="XMc-oh-xGT" id="01B-qt-z6Y"/>
+            </connections>
+            <point key="canvasLocation" x="-287.68115942028987" y="119.53125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
